@@ -155,4 +155,9 @@ window.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('scroll', showModalByScroll)
     
+
+    // Шаблонизировать карточки. 
+    // И создавать их передавая нужные аргументы
+
+    
 });
