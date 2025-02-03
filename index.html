@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food</title>
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -113,18 +114,20 @@
                     </div>
                 </div>
                 <div class="offer__slider-wrapper">
-                    <div class="offer__slide">
-                        <img src="img/slider/pepper.jpg" alt="pepper">
+                    <div class="offer__slider-inner">
+                        <div class="offer__slide">
+                            <img src="img/slider/pepper.jpg" alt="pepper">
+                        </div>
+                        <div class="offer__slide">
+                            <img src="img/slider/food-12.jpg" alt="food">
+                        </div>
+                        <div class="offer__slide">
+                            <img src="img/slider/olive-oil.jpg" alt="oil">
+                        </div>
+                        <div class="offer__slide">
+                            <img src="img/slider/paprika.jpg" alt="paprika">
+                        </div>
                     </div>
-                    <!-- <div class="offer__slide">
-                        <img src="img/slider/food-12.jpg" alt="food">
-                    </div>
-                    <div class="offer__slide">
-                        <img src="img/slider/olive-oil.jpg" alt="oil">
-                    </div>
-                    <div class="offer__slide">
-                        <img src="img/slider/paprika.jpg" alt="paprika">
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -141,8 +144,8 @@
                     Ваш пол
                 </div>
                 <div class="calculating__choose" id="gender">
-                    <div class="calculating__choose-item calculating__choose-item_active">Женщина</div>
-                    <div class="calculating__choose-item">Мужчина</div>
+                    <div id="female" class="calculating__choose-item calculating__choose-item_active">Женщина</div>
+                    <div id="male" class="calculating__choose-item">Мужчина</div>
                 </div>
 
                 <div class="calculating__subtitle">
@@ -158,10 +161,10 @@
                     Выберите вашу физическая активность
                 </div>
                 <div class="calculating__choose calculating__choose_big">
-                    <div id="low" class="calculating__choose-item">Низкая активность </div>
-                    <div id="small"  class="calculating__choose-item calculating__choose-item_active">Невысокая активность</div>
-                    <div id="medium" class="calculating__choose-item">Умеренная активность</div>
-                    <div id="high" class="calculating__choose-item">Высокая активность</div>
+                    <div data-ratio="1.2" id="low" class="calculating__choose-item">Низкая активность </div>
+                    <div data-ratio="1.375" id="small"  class="calculating__choose-item calculating__choose-item_active">Невысокая активность</div>
+                    <div data-ratio="1.55" id="medium" class="calculating__choose-item">Умеренная активность</div>
+                    <div data-ratio="1.725" id="high" class="calculating__choose-item">Высокая активность</div>
                 </div>
 
                 <div class="calculating__divider"></div>
@@ -195,7 +198,7 @@
             <div class="title">Заказывай пробный день прямо сейчас!</div>
             <form action="#" class="order__form">
                 <input required placeholder="Ваше имя" name="name" type="text" class="order__input">
-                <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="order__input">
+                <input required placeholder="Ваш номер телефона" name="phone" type="tel" class="order__input">
                 <img src="icons/right.svg" alt="right">
                 <button class="btn btn_dark btn_min">Перезвонить мне</button>
             </form>
@@ -264,14 +267,15 @@
                 <form action="#">
                     <div data-close class="modal__close">&times;</div>
                     <div class="modal__title">Мы свяжемся с вами как можно быстрее!</div>
-                    <input required placeholder="Ваше имя" name="name" type="text" class="modal__input">
-                    <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal__input">
+                    <input required placeholder="Ваше имя" name="modal__name" type="text" class="modal__input">
+                    <input required placeholder="Ваш номер телефона" name="modal__phone" type="tel" class="modal__input">
                     <button class="btn btn_dark btn_min">Перезвонить мне</button>
                 </form>
             </div>
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

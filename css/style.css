@@ -15,6 +15,10 @@ a {
     text-decoration: none
 }
 
+body > *:not(header):not(footer) {
+    padding: 20px; /* внутренний отступ от краёв */
+  }
+
 .btn {
     width: 220px;
     height: 65px;
@@ -249,7 +253,8 @@ a {
 
 .offer .container {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    margin: 0 10%
 }
 
 .offer .bgc_y {
