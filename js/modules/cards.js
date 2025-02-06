@@ -31,7 +31,7 @@ function cards() {
             }
 
             element.innerHTML = `
-                <img src="${this.src}" alt="${this.alt}">
+                <img src="${this.src}" alt="${this.alt}" style="width: 100%; height: 100%; object-fit: contain;">
                 <h3 class="menu__item-subtitle">${this.title}</h3>
                 <div class="menu__item-descr">${this.descr}</div>
                 <div class="menu__item-divider"></div>
