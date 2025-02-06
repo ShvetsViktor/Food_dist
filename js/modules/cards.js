@@ -1,16 +1,8 @@
-import {getResource} from "../services/services";
+import { getResource } from "../services/services";
 
 function cards() {
-    // Используем классы для карточек.
-
-    // Шаблонизировать карточки. 
-    // И создавать их передавая нужные аргументы
-
-    // # 1. Создаём Шаблон(класс)
-
-
     class MenuCard {
-        constructor(src, alt, title, descr, price, parentSelector, ...classes) {
+        constructor(src, alt, title = "Без названия", descr = "Нет описания", price = "—", parentSelector, ...classes) {
             this.src = src;
             this.alt = alt;
             this.title = title;
@@ -23,21 +15,23 @@ function cards() {
         }
 
         changeToUAH() {
-            this.price = this.price * this.transfer;
+            if (!isNaN(this.price)) {
+                this.price = this.price * this.transfer;
+            }
         }
 
         render() {
-            const element = document.createElement('div');
+            const element = document.createElement("div");
 
             if (this.classes.length === 0) {
-                this.classes = 'menu__item';
+                this.classes = "menu__item";
                 element.classList.add(this.classes);
             } else {
-                this.classes.forEach(className => element.classList.add(className));
+                this.classes.forEach((className) => element.classList.add(className));
             }
 
             element.innerHTML = `
-                <img src=${this.src} alt=${this.alt}>
+                <img src="${this.src}" alt="${this.alt}">
                 <h3 class="menu__item-subtitle">${this.title}</h3>
                 <div class="menu__item-descr">${this.descr}</div>
                 <div class="menu__item-divider"></div>
@@ -50,12 +44,13 @@ function cards() {
         }
     }
 
-    getResource('http://localhost:3000/menu')
+    getResource("https://json-server-rest-api.shvetsviktor89.workers.dev/images")
         .then(data => {
-            data.forEach(({img, altimg, title, descr, price}) => {
-                new MenuCard(img, altimg, title, descr, price, '.menu .container').render();
+            data.forEach(({ url, alt, title, descr, price }) => {
+                new MenuCard(url, alt, title, descr, price, ".menu .container").render();
             });
-        });
+        })
+        .catch(error => console.error("Ошибка загрузки изображений:", error));
 }
 
-export default cards; // new standard
+export default cards;
