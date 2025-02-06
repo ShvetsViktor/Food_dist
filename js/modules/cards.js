@@ -2,9 +2,9 @@ import { getResource } from "../services/services";
 
 function cards() {
     class MenuCard {
-        constructor(src, alt, title = "Без названия", descr = "Нет описания", price = "—", parentSelector, ...classes) {
+        constructor(src, altimg, title = "Без названия", descr = "Нет описания", price = "—", parentSelector, ...classes) {
             this.src = src;
-            this.alt = alt;
+            this.alt = altimg;
             this.title = title;
             this.descr = descr;
             this.price = price;
