@@ -181,7 +181,7 @@ function cards() {
             }
 
             element.innerHTML = `
-                <img src="${this.src}" alt="${this.alt}">
+                <img src="${this.src}" alt="${this.alt}" style="width: 100%; height: 100%; object-fit: contain;">
                 <h3 class="menu__item-subtitle">${this.title}</h3>
                 <div class="menu__item-descr">${this.descr}</div>
                 <div class="menu__item-divider"></div>
@@ -196,8 +196,8 @@ function cards() {
 
     (0,_services_services__WEBPACK_IMPORTED_MODULE_0__.getResource)("https://json-server-rest-api.shvetsviktor89.workers.dev/images")
         .then(data => {
-            data.forEach(({ url, alt, title, descr, price }) => {
-                new MenuCard(url, alt, title, descr, price, ".menu .container").render();
+            data.forEach(({ url, altimg, title, descr, price }) => {
+                new MenuCard(url, altimg, title, descr, price, ".menu .container").render();
             });
         })
         .catch(error => console.error("Ошибка загрузки изображений:", error));
