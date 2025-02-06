@@ -2,9 +2,9 @@ import { getResource } from "../services/services";
 
 function cards() {
     class MenuCard {
-        constructor(src, altimg, title = "Без названия", descr = "Нет описания", price = "—", parentSelector, ...classes) {
+        constructor(src, alt, title = "Без названия", descr = "Нет описания", price = "—", parentSelector, ...classes) {
             this.src = src;
-            this.alt = altimg;
+            this.alt = alt;
             this.title = title;
             this.descr = descr;
             this.price = price;
@@ -46,8 +46,8 @@ function cards() {
 
     getResource("https://json-server-rest-api.shvetsviktor89.workers.dev/images")
         .then(data => {
-            data.forEach(({ url, alt, title, descr, price }) => {
-                new MenuCard(url, alt, title, descr, price, ".menu .container").render();
+            data.forEach(({ url, altimg, title, descr, price }) => {
+                new MenuCard(url, altimg, title, descr, price, ".menu .container").render();
             });
         })
         .catch(error => console.error("Ошибка загрузки изображений:", error));
