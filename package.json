@@ -44,6 +44,7 @@
     "mime": "^4.0.4",
     "mrmime": "^2.0.0",
     "negotiator": "^0.6.4",
+    "nodelist-foreach-polyfill": "^1.2.0",
     "readdirp": "^4.1.1",
     "regexparam": "^2.0.2",
     "sirv": "^2.0.4",

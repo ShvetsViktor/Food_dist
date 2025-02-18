@@ -1,3 +1,7 @@
+import 'core-js/actual/promise';
+import 'nodelist-foreach-polyfill';
+
+
 import tabs from './modules/tabs';
 import modal from './modules/modal';
 import timer from './modules/timer';
