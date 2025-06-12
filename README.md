@@ -1,45 +1,41 @@
-# Employees Project
+# Food Distribution Project
 
-## To access the site, please follow the link below.  
-*Note: This is a learning project focused on mastering React component state management.*
+## 🔗 Live Demo
 
-[https://shvetsviktor.github.io/employees/](https://shvetsviktor.github.io/employees/)
+Access the site here:  
+[https://shvetsviktor.github.io/Food_dist/](https://shvetsviktor.github.io/Food_dist/)
 
-This is a React web application built as part of an educational exercise.  
-The main goal of this project is to explore and understand how to manage component state in React applications.
+## 📚 About This Project
+
+This is a learning project where I practiced core JavaScript (ES6+) by building an interactive, multi-section landing page with features like tab navigation, modal popups, form submission, a countdown timer, and dynamic menu cards.
+
+The project helped reinforce key front-end development concepts, such as DOM manipulation, asynchronous requests (AJAX), and working with form data.
 
 ## 🎯 Project Goal
 
-To gain hands-on experience with React state management, component composition, and dynamic rendering using real-world data structures in a small app context.
+To practice and deepen my understanding of modern JavaScript by building real, interactive features without using front-end frameworks.
 
 ## 🚀 Features
 
-- Component-based architecture with stateful logic
-- Add, remove, and filter employee entries
-- Responsive layout with Bootstrap and React-Bootstrap
+- Tabbed content sections
+- Modal window with open/close events
+- Countdown timer to a set deadline
+- Dynamic rendering of cards using JavaScript classes
+- Form submission with XMLHttpRequest
+- Responsive layout using CSS and media queries
 
 ## 📦 Technologies Used
 
-- React 19
-- Bootstrap 5
-- React-Bootstrap
-- React Scripts (CRA)
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
+- Cloudflare Workers (used for handling form submissions)
 
-## 🛠 Installation
+## 🛠 How to Run Locally
 
-Clone the repository and run the following commands:
+Simply open `index.html` in your browser.  
+For form submission to work, configure the API endpoint used in `script.js`.
 
-```bash
-npm install
-npm start
-```
+## 📝 License
 
-To build for production:
-
-```bash
-npm run build
-```
-
-## 📄 License
-
-This project is open source and available under the MIT License.
+This project is licensed under the MIT License.
